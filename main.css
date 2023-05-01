@@ -81,6 +81,16 @@ body {
     transition-delay:0s;
 }
 
+.item-jekyll {
+    margin-left:25px;
+    margin-right:25px;
+
+    transition-property:transform;
+    transition-duration:0.3s;
+    transition-timing-function:ease-in-out;
+    transition-delay:0s;
+}
+
 .item-email {
     margin-left:25px;
     margin-right:0px;
@@ -113,7 +123,7 @@ body {
 
 /* animations */
 
-.item-github:hover, .item-linkedin:hover, .item-wordpress:hover, .item-email:hover {
+.item-github:hover, .item-linkedin:hover, .item-wordpress:hover, .item-email:hover, .item-jekyll:hover {
     transform:translateY(-8px);
 }
 

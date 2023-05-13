@@ -15,10 +15,6 @@ I wanted to try my hand at creating a less visually cluttered site, that had a f
 ![CSS](https://img.shields.io/badge/-CSS-000?&logo=css3)
 ![Github](https://img.shields.io/badge/-Github%20Sites-000?&logo=github)
 
-> **Built** in *Typescript, HTML and CSS*.
->
-> **Deployed** with *Github static sites*.
-
 <h3>To do</h3>
 
 * [ ] implement smooth transitioning for social icons  

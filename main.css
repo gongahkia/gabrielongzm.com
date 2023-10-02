@@ -51,6 +51,10 @@ body {
     justify-content:center
 }
 
+.container-list {
+    font-size:1.2rem;
+}
+
 .item-github {
     margin-left:0px;
     margin-right:25px;
@@ -81,7 +85,7 @@ body {
     transition-delay:0s;
 }
 
-.item-jekyll {
+.item-email {
     margin-left:25px;
     margin-right:25px;
 
@@ -91,7 +95,7 @@ body {
     transition-delay:0s;
 }
 
-.item-email {
+.item-Rmarkdown {
     margin-left:25px;
     margin-right:0px;
 
@@ -109,6 +113,22 @@ body {
     font-size:2.5rem;
 }
 
+/* posts formatting */
+
+.post-1 {
+    transition-property:transform;
+    transition-duration:0.3s;
+    transition-timing-function:ease-in-out;
+    transition-delay:0s;
+}
+
+.post-2 {
+    transition-property:transform;
+    transition-duration:0.3s;
+    transition-timing-function:ease-in-out;
+    transition-delay:0s;
+}
+
 /* color palette swap */
 
 .lightMode {
@@ -123,8 +143,12 @@ body {
 
 /* animations */
 
-.item-github:hover, .item-linkedin:hover, .item-wordpress:hover, .item-email:hover, .item-jekyll:hover {
+.item-github:hover, .item-linkedin:hover, .item-wordpress:hover, .item-email:hover, .item-Rmarkdown:hover {
     transform:translateY(-8px);
+}
+
+.post-1:hover, .post-2:hover {
+    transform:translateX(8px);
 }
 
 /* general link styling */

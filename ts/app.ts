@@ -1,8 +1,40 @@
-// FUA: 
-// - Can I add transition frames to allow smoothing of icon svg color inversion?
-// - Can I add a small clippy like pop up text box from the pikmin to encourage users to change color?
+const wobblyShape = document.querySelector('.wobblyShape') as HTMLElement;
 
-const theButton = document.getElementById("pikminButton");
+document.addEventListener('mousemove', (event: MouseEvent) => {
+  const { clientX, clientY } = event;
+  wobblyShape.style.left = `${clientX}px`;
+  wobblyShape.style.top = `${clientY}px`;
+});
+
+let isMouseDown: boolean = false;
+
+document.addEventListener('mousedown', () => {
+  isMouseDown = true;
+  if (wobblyShape) {
+    wobblyShape.style.width = '50px';
+    wobblyShape.style.height = '50px';
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isMouseDown = false;
+  if (wobblyShape) {
+    wobblyShape.style.width = '22px';
+    wobblyShape.style.height = '22px';
+  }
+});
+
+document.addEventListener('mouseleave', () => {
+  if (isMouseDown) {
+    isMouseDown = false;
+    if (wobblyShape) {
+      wobblyShape.style.width = '22px';
+      wobblyShape.style.height = '22px';
+    }
+  }
+});
+
+const theButton = document.getElementById("infinityButton");
 theButton?.addEventListener("click", pressTheButton);
 
 function pressTheButton() {
@@ -13,28 +45,38 @@ function pressTheButton() {
     const linkedinPic = document.getElementById("linkedinImg")!;
     const wordpressPic = document.getElementById("wordpressImg")!;
     const gmailPic = document.getElementById("gmailImg")!;
-    const pikminPic = document.getElementById("pikminButton")!;
+    const infinityPic = document.getElementById("infinityButton")!;
 
     const randomColor: string = rngHexColor();
     console.log(randomColor, checkHexDarkness(randomColor), currentMode);
     mainFella!.style.backgroundColor = randomColor; // ! asserts that a variable is non-nullable and is defined
+
+    // the class "rotated" must be added to the element everytime it is to be played
+    infinityPic.classList.add('rotated');
+        
     if (checkHexDarkness(randomColor)) { // if relatively darker
         mainFella!.removeAttribute("class");
-        mainFella!.setAttribute("class", "darkMode");
+        mainFella!.setAttribute("class", "darkMode wobbly-shape");
         githubPic!.setAttribute("style", "filter:invert(1);");
         linkedinPic!.setAttribute("style", "filter:invert(1);");
         wordpressPic!.setAttribute("style", "filter:invert(1);");
         gmailPic!.setAttribute("style", "filter:invert(1);");
-        pikminPic!.setAttribute("style", "filter:invert(1);");
+        infinityPic!.setAttribute("style", "filter:invert(1);");
     } else { // if relatively light
         mainFella!.removeAttribute("class");
-        mainFella!.setAttribute("class", "lightMode");
+        mainFella!.setAttribute("class", "lightMode wobbly-shape");
         githubPic!.removeAttribute("style");
         linkedinPic!.removeAttribute("style");
         wordpressPic!.removeAttribute("style");
         gmailPic!.removeAttribute("style");
-        pikminPic!.removeAttribute("style");
+        infinityPic!.removeAttribute("style");
     }
+
+    // setTimeout() ensures the animation has cleared its entire cycle first before removing it
+    setTimeout(() => {
+        infinityPic.classList.remove('rotated');
+    }, 750); 
+
 }
 
 function rngHexColor(): string {

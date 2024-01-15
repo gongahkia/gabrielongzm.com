@@ -34,48 +34,73 @@ document.addEventListener('mouseleave', () => {
   }
 });
 
-const theButton = document.getElementById("infinityButton");
+const theButton = document.getElementById("infinityButton") as HTMLElement;
 theButton?.addEventListener("click", pressTheButton);
 
 function pressTheButton() {
-    // these HTML elements will change when the button is pressed if the color is detected
-    const mainFella = document.getElementById("mainBody");
-    const currentMode = mainFella?.getAttributeNode("class")!;
-    const githubPic = document.getElementById("githubImg")!;
-    const linkedinPic = document.getElementById("linkedinImg")!;
-    const wordpressPic = document.getElementById("wordpressImg")!;
-    const gmailPic = document.getElementById("gmailImg")!;
-    const infinityPic = document.getElementById("infinityButton")!;
 
-    const randomColor: string = rngHexColor();
-    console.log(randomColor, checkHexDarkness(randomColor), currentMode);
-    mainFella!.style.backgroundColor = randomColor; // ! asserts that a variable is non-nullable and is defined
+  const myNamePara = document.getElementById("my-name") as HTMLElement;
+  const myDescPara = document.getElementById("my-description") as HTMLElement;
+  const myCredPara = document.getElementById("my-credits") as HTMLElement;
 
-    // the class "rotated" must be added to the element everytime it is to be played
-    infinityPic.classList.add('rotated');
+  if (myNamePara && myDescPara && myCredPara) {
+
+    // console.log("yummy");
+
+    const currentNameText = myNamePara.innerText;
+    const altNameText = myNamePara.getAttribute("data-alt-text") || "";
+    myNamePara.innerText = altNameText;
+    myNamePara.setAttribute("data-alt-text", currentNameText);
+
+    const currentDescText = myDescPara.innerText;
+    const altDescText = myDescPara.getAttribute("data-alt-text") || "";
+    myDescPara.innerText = altDescText;
+    myDescPara.setAttribute("data-alt-text", currentDescText);
+
+    const currentCreditsHTML = myCredPara.innerHTML;
+    const altCreditsHTML = myCredPara.getAttribute("data-alt-html") || "";
+    myCredPara.innerHTML = altCreditsHTML;
+    myCredPara.setAttribute("data-alt-html", currentCreditsHTML);
+  }
+
+  // these HTML elements will change when the button is pressed if the color is detected
+  const mainFella = document.getElementById("mainBody");
+  const currentMode = mainFella?.getAttributeNode("class")!;
+  const githubPic = document.getElementById("githubImg")!;
+  const linkedinPic = document.getElementById("linkedinImg")!;
+  const wordpressPic = document.getElementById("wordpressImg")!;
+  const gmailPic = document.getElementById("gmailImg")!;
+  const infinityPic = document.getElementById("infinityButton")!;
+
+  const randomColor: string = rngHexColor();
+  console.log(randomColor, checkHexDarkness(randomColor), currentMode);
+  mainFella!.style.backgroundColor = randomColor; // ! asserts that a variable is non-nullable and is defined
+
+  // the class "rotated" must be added to the element everytime it is to be played
+  infinityPic.classList.add('rotated');
         
-    if (checkHexDarkness(randomColor)) { // if relatively darker
-        mainFella!.removeAttribute("class");
-        mainFella!.setAttribute("class", "darkMode wobbly-shape");
-        githubPic!.setAttribute("style", "filter:invert(1);");
-        linkedinPic!.setAttribute("style", "filter:invert(1);");
-        wordpressPic!.setAttribute("style", "filter:invert(1);");
-        gmailPic!.setAttribute("style", "filter:invert(1);");
-        infinityPic!.setAttribute("style", "filter:invert(1);");
-    } else { // if relatively light
-        mainFella!.removeAttribute("class");
-        mainFella!.setAttribute("class", "lightMode wobbly-shape");
-        githubPic!.removeAttribute("style");
-        linkedinPic!.removeAttribute("style");
-        wordpressPic!.removeAttribute("style");
-        gmailPic!.removeAttribute("style");
-        infinityPic!.removeAttribute("style");
-    }
+  if (checkHexDarkness(randomColor)) { // if relatively darker
+      mainFella!.removeAttribute("class");
+      mainFella!.setAttribute("class", "darkMode wobbly-shape");
+      githubPic!.setAttribute("style", "filter:invert(1);");
+      linkedinPic!.setAttribute("style", "filter:invert(1);");
+      wordpressPic!.setAttribute("style", "filter:invert(1);");
+      gmailPic!.setAttribute("style", "filter:invert(1);");
+      infinityPic!.setAttribute("style", "filter:invert(1);");
+  } else { // if relatively light
+      mainFella!.removeAttribute("class");
+      mainFella!.setAttribute("class", "lightMode wobbly-shape");
+      githubPic!.removeAttribute("style");
+      linkedinPic!.removeAttribute("style");
+      wordpressPic!.removeAttribute("style");
+      gmailPic!.removeAttribute("style");
+      infinityPic!.removeAttribute("style");
+  }
 
-    // setTimeout() ensures the animation has cleared its entire cycle first before removing it
-    setTimeout(() => {
-        infinityPic.classList.remove('rotated');
-    }, 750); 
+  // setTimeout() ensures the animation has cleared its entire cycle first before removing it
+  setTimeout(() => {
+      infinityPic.classList.remove('rotated');
+  }, 750); 
 
 }
 

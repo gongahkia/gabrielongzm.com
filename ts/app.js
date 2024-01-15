@@ -34,8 +34,9 @@ theButton === null || theButton === void 0 ? void 0 : theButton.addEventListener
 function pressTheButton() {
     const myNamePara = document.getElementById("my-name");
     const myDescPara = document.getElementById("my-description");
-    const myCredPara = document.getElementById("my-credits");
-    if (myNamePara && myDescPara && myCredPara) {
+    const myCredNamePara = document.getElementById("my-credits-name");
+    const myCredGithubPara = document.getElementById("my-credits-github");
+    if (myNamePara && myDescPara && myCredNamePara && myCredGithubPara) {
         // console.log("yummy");
         const currentNameText = myNamePara.innerText;
         const altNameText = myNamePara.getAttribute("data-alt-text") || "";
@@ -45,10 +46,14 @@ function pressTheButton() {
         const altDescText = myDescPara.getAttribute("data-alt-text") || "";
         myDescPara.innerText = altDescText;
         myDescPara.setAttribute("data-alt-text", currentDescText);
-        const currentCreditsHTML = myCredPara.innerHTML;
-        const altCreditsHTML = myCredPara.getAttribute("data-alt-html") || "";
-        myCredPara.innerHTML = altCreditsHTML;
-        myCredPara.setAttribute("data-alt-html", currentCreditsHTML);
+        const currentCreditsNameText = myCredNamePara.innerText;
+        const altCreditsNameText = myCredNamePara.getAttribute("data-alt-text") || "";
+        myCredNamePara.innerText = altCreditsNameText;
+        myCredNamePara.setAttribute("data-alt-text", currentCreditsNameText);
+        const currentCreditsGithubText = myCredGithubPara.innerText;
+        const altCreditsGithubText = myCredGithubPara.getAttribute("data-alt-text") || "";
+        myCredGithubPara.innerText = altCreditsGithubText;
+        myCredGithubPara.setAttribute("data-alt-text", currentCreditsGithubText);
     }
     // these HTML elements will change when the button is pressed if the color is detected
     const mainFella = document.getElementById("mainBody");

@@ -135,7 +135,7 @@ body {
 a {
     color:var(--text);
     text-decoration:none;
-    /* transition:background 750ms ease-in-out, color 1000ms ease-in-out; */
+    transition:background 750ms ease-in-out, color 1000ms ease-in-out;
     cursor: none;
 }
 

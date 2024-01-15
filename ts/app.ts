@@ -43,6 +43,8 @@ function pressTheButton() {
   const myDescPara = document.getElementById("my-description") as HTMLElement;
   const myCredNamePara = document.getElementById("my-credits-name") as HTMLAnchorElement;
   const myCredGithubPara = document.getElementById("my-credits-github") as HTMLAnchorElement;
+  const myCredJapOnePara = document.getElementById("my-japanese-is-bad") as HTMLAnchorElement;
+  const myCredJapTwoPara = document.getElementById("my-japanese-is-good") as HTMLAnchorElement;
 
   if (myNamePara && myDescPara && myCredNamePara && myCredGithubPara) {
 
@@ -67,6 +69,17 @@ function pressTheButton() {
     const altCreditsGithubText = myCredGithubPara.getAttribute("data-alt-text") || "";
     myCredGithubPara.innerText = altCreditsGithubText;
     myCredGithubPara.setAttribute("data-alt-text", currentCreditsGithubText);
+
+    const currentJapOneText = myCredJapOnePara.innerText;
+    const altJapOneText = myCredJapOnePara.getAttribute("data-alt-text") || "";
+    myCredJapOnePara.innerText = altJapOneText;
+    myCredJapOnePara.setAttribute("data-alt-text", currentJapOneText);
+
+    const currentJapTwoText = myCredJapTwoPara.innerText;
+    const altJapTwoText = myCredJapTwoPara.getAttribute("data-alt-text") || "";
+    myCredJapTwoPara.innerText = altJapTwoText;
+    myCredJapTwoPara.setAttribute("data-alt-text", currentJapTwoText);
+
   }
 
   // these HTML elements will change when the button is pressed if the color is detected

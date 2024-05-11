@@ -1,3 +1,11 @@
+/* 
+    fua
+        work out contradictions between the existing style.css content with my existing migrated css content 
+        change out the hardcoded url font for a local download of the font file if possible
+*/
+
+/* --- FONTS --- */
+
 @font-face {
     font-family: 'SuisseIntl';
     font-style: normal;
@@ -54,16 +62,18 @@
     src: url(https://fonts.bunny.net/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff2) format('woff2')
 }
 
+/* defines some custom layers */
 @layer margin, size, font, font-size, text-decoration, color, border, grid, figure, dark-mode;
 
-
-@layer margin {
+/* resets all margins and paddings to zero for all elements as a default */
+@layer margin { 
     * {
         padding: 0;
         margin: 0;
     }
 }
 
+/* define variables for various sizes */
 @layer size {
     :root {
         --unit-size: 24px;
@@ -72,12 +82,11 @@
         --thin-border-width: 0.5px;
     }
     :root:has(input#dark-mode:checked) {
-        /* Use thinner borders as the border color is white, which is 'an expanding color'. */
         --thick-border-width: 1.5px;
-        /* For thin borders, adjust colors instead of the width */
     }
 }
 
+/* define fonts for different elements */
 @layer font {
     body {
         font-family: 'SuisseIntl', 'Helvetica Neue', 'Helvetica', 'Arial', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', 'Meiryo', sans-serif;
@@ -104,6 +113,7 @@
     }
 }
 
+/* define font sizes and line heights elements */
 @layer font-size {
     body {
         font-size: calc(var(--unit-size) * 2 / 3);
@@ -127,6 +137,7 @@
     }
 }
 
+/* define underlines for anchor tags */
 @layer text-decoration {
     a {
         text-decoration-line: underline;
@@ -134,6 +145,7 @@
     }
 }
 
+/* define core colors */
 @layer color {
     :root {
         --color-white: #ffffff;
@@ -157,6 +169,7 @@
     }
 }
 
+/* define layout with flexbox for dynamic sizing and alignment */
 @layer flex {
     body {
         display: flex;
@@ -164,25 +177,23 @@
     main {
         display: flex;
         flex-direction: column;
-
         flex-grow: 1;
         align-items: center;
     }
     article {
         display: flex;
         flex-direction: column;
-
         width: calc(4 * var(--column-size) + 3 * var(--unit-size));
         max-width: calc(100vw - 2 * var(--unit-size) + 2 * var(--unit-size) / 6);
     }
 }
 
+/* define borders */
 @layer border {
     article {
         border-top: var(--thick-border-width) solid var(--foreground-color);
         margin-top: calc((var(--unit-size) - var(--thick-border-width)) / 2 + var(--unit-size));
         padding-top: calc((var(--unit-size) - var(--thick-border-width)) / 2);
-
         border-bottom: var(--thick-border-width) solid var(--foreground-color);
         margin-bottom: calc((var(--unit-size) - var(--thick-border-width)) / 2 + var(--unit-size));
         padding-bottom: calc((var(--unit-size) - var(--thick-border-width)) / 2 + var(--unit-size));
@@ -204,6 +215,7 @@
     }
 }
 
+/* define section layout with grid for element alignment */
 @layer grid {
     section {
         display: flex;
@@ -219,7 +231,6 @@
     section > aside {
         width: var(--column-size);
     }
-
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, calc((100% - 2 * var(--unit-size)) / 3));
@@ -234,7 +245,6 @@
     .grid-item-3 {
         grid-column: span 3;
     }
-
     h2 {
         padding-left: calc((100% - 3 * var(--unit-size)) / 4 + var(--unit-size))
     }
@@ -262,7 +272,7 @@
         margin-top: 0;
     }
 
-    /* Unfortunately, CSS variables are not available at @media queries yet. */
+    /* dynamically resize content for screens of different sizes */
     @media only screen and (max-width: calc(4 * 168px + 5 * 24px)) {
         section > * {
             width: 100%;
@@ -300,6 +310,7 @@
             padding-left: var(--unit-size);
         }
     }
+
     @media only screen and (max-width: calc(3 * 168px + 4 * 24px)) {
         section.title > aside {
             width: 100%;
@@ -307,7 +318,6 @@
         section.title > header {
             width: 100%;
         }
-
         .grid-container {
             grid-template-columns: repeat(2, calc((100% - var(--unit-size)) / 2));
         }
@@ -334,6 +344,7 @@
             margin-top: 0;
         }
     }
+
     @media only screen and (max-width: calc(2 * 168px + 3 * 24px)) {
         .grid-container {
             grid-template-columns: 100%;
@@ -347,6 +358,7 @@
     }
 }
 
+/* defines figures */
 @layer figure {
     figure {
         width: 100%;
@@ -363,6 +375,8 @@
     }
 }
 
+/* defines styles when toggling dark mode */
+    /* fua probably need to edit this later */
 @layer dark-mode {
     input#dark-mode {
         display: none;
@@ -394,6 +408,7 @@
     }
 }
 
+/* fua need to integrate and edit this also */
 /* --- ADDITIONS FROM MY ORIGINAL MAIN.CSS FILE MIGRATED OVER --- */
 
 /* original ANCHOR TAG link logic (but probably needs to be commented out for now) */

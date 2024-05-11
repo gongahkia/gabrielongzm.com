@@ -1,3 +1,7 @@
+// fua
+    // try migrating code from app.js to script.js here to interact with styles.css
+    // need to examine element names on index.html and edit them accordingly
+
 addEventListener("DOMContentLoaded", (e) => {
     const darkModeCheckbox = document.getElementById("dark-mode");
 

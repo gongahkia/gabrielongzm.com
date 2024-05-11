@@ -1,3 +1,6 @@
+// fua
+    // eventually target migration of all these features to script.js on my new website
+
 "use strict";
 
 const theButton = document.getElementById("infinityButton");

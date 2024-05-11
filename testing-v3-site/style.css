@@ -2,6 +2,7 @@
     fua
         work out contradictions between the existing style.css content with my existing migrated css content 
         change out the hardcoded url font for a local download of the font file if possible
+        ensure that color changing on my new website aligns w old dark and light colors used on hajime's website
 */
 
 /* --- FONTS --- */
@@ -443,19 +444,4 @@
 
 .darkMode {
     --text:white;
-}
-
-/* rotate a button */
-
-@keyframes rotate { 
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
-
-.rotated {
-    animation: rotate 0.75s linear;
 }

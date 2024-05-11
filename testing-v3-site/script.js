@@ -1,7 +1,3 @@
-// fua
-    // rework tolerance for light and dark, feed to gemeni as needed
-    // change color of my svg icon in css or html, its too bright right now and align it with the text and article colors in style.css
-
 "use strict";
 
 // --- actual running code ---
@@ -25,11 +21,11 @@ function pressTheButton() {
     if (checkHexDarkness(randomColor)){ // background darker
         theButton.setAttribute("style", "filter:invert(1);");
         articleTag[0].setAttribute("style", "filter:invert(1);");
-        imageTag.style.filter = "invert(1)"; 
+        imageTag.style.filter = "invert(1)"; // wtf magic boolean swap
     } else { // background lighter
         theButton.style.filter = "none";
         articleTag[0].style.filter = "none";
-        imageTag.style.filter = "none"; 
+        imageTag.style.filter = "none"; // boolean inversion wizadry again, who's gonna know?
     }
 
 }

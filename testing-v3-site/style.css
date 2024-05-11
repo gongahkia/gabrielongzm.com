@@ -1,8 +1,7 @@
 /* 
     fua
-        work out contradictions between the existing style.css content with my existing migrated css content 
         change out the hardcoded url font for a local download of the font file if possible
-        ensure that color changing on my new website aligns w old dark and light colors used on hajime's website
+        make infinity button same color as rest of text in the webpage
 */
 
 /* --- FONTS --- */
@@ -138,12 +137,18 @@
     }
 }
 
-/* define underlines for anchor tags */
+/* define anchor tag decoration */
 @layer text-decoration {
     a {
         text-decoration-line: underline;
         text-decoration-thickness: 1px;
     }
+}
+
+/* define button decoration */
+#infinityButton {
+    color: var(--foreground-color);
+    background: none;
 }
 
 /* define core colors */
@@ -377,7 +382,6 @@
 }
 
 /* defines styles when toggling dark mode */
-    /* fua probably need to edit this later */
 @layer dark-mode {
     input#dark-mode {
         display: none;
@@ -407,41 +411,4 @@
     input#dark-mode ~ label svg path {
         fill: var(--foreground-color);
     }
-}
-
-/* --- ADDITIONS FROM MY ORIGINAL MAIN.CSS FILE MIGRATED OVER --- */
-    /* fua need to integrate and edit this also */
-
-/* original ANCHOR TAG link logic (but probably needs to be commented out for now) */
-
-/* a {
-    color:var(--text);
-    text-decoration:none;
-    transition:background 750ms ease-in-out, color 1000ms ease-in-out;
-    cursor: none;
-} */
-
-/* original BODY logic (but probably needs to be commented out for now) */
-
-/* body {
-    font-family: 'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-    color:var(--text);
-    background-color: white;
-    transition:background 750ms ease-in-out, color 1000ms ease-in-out;
-} */
-
-/* infinity button svg */
-
-#infinityButton {
-    background: none;
-}
-
-/* color palette swap */
-
-.lightMode {
-    --text:black;
-}
-
-.darkMode {
-    --text:white;
 }

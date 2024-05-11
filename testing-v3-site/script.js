@@ -1,34 +1,10 @@
 // fua
-    // try migrating code from app.js to script.js here to interact with styles.css
-    // need to examine element names on index.html and edit them accordingly
-    // also work out how to add smoothing between the colors and text changing color
-    // rework tolerance for light and dark?
-    // the picture is inverting color now too; prevent that
-    // invert the article header also
-    // change color of my svg icon in css or html, its too bright right now
+    // rework tolerance for light and dark, feed to gemeni as needed
+    // change color of my svg icon in css or html, its too bright right now and align it with the text and article colors in style.css
 
 "use strict";
 
-// // toggle light and dark mode
-// addEventListener("DOMContentLoaded", (e) => {
-//     const darkModeCheckbox = document.getElementById("dark-mode");
-//     darkModeCheckbox.addEventListener('change', (e) => {
-//         localStorage.setItem('darkMode', JSON.stringify(e.target.checked));
-//     });
-//     let darkMode = false;
-//     if (localStorage.getItem('darkMode') !== null) {
-//         try {
-//             darkMode = !!JSON.parse(localStorage.getItem('darkMode'));
-//         } catch (e) {
-//             console.error(e);
-//         }
-//     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//         darkMode = true;
-//     }
-//     darkModeCheckbox.checked = darkMode;
-// });
-
-// --- EDIT THIS ENTIRE BOTTOM PORTION ---
+// --- actual running code ---
 
 const theButton = document.getElementById("infinityButton");
 theButton === null || theButton === void 0 ? void 0 : theButton.addEventListener("click", pressTheButton);
@@ -43,17 +19,17 @@ function pressTheButton() {
 
     // making use of dom selector
     const articleTag = document.getElementsByClassName("overallArticleTags");
-    const imageTag = document.getElementById("gongImage")
+    const imageTag = document.getElementById("gongImage");
 
     // color change
     if (checkHexDarkness(randomColor)){ // background darker
         theButton.setAttribute("style", "filter:invert(1);");
         articleTag[0].setAttribute("style", "filter:invert(1);");
-        imageTag.setAttribute("style", "filter:invert(1)"); // wtf some boolean inversion magic
+        imageTag.style.filter = "invert(1)"; 
     } else { // background lighter
         theButton.style.filter = "none";
         articleTag[0].style.filter = "none";
-        imageTag.style.filter = "none";
+        imageTag.style.filter = "none"; 
     }
 
 }

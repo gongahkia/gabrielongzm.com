@@ -408,8 +408,8 @@
     }
 }
 
-/* fua need to integrate and edit this also */
 /* --- ADDITIONS FROM MY ORIGINAL MAIN.CSS FILE MIGRATED OVER --- */
+    /* fua need to integrate and edit this also */
 
 /* original ANCHOR TAG link logic (but probably needs to be commented out for now) */
 
@@ -433,10 +433,6 @@
 
 #infinityButton {
     background: none;
-    border: none;
-    cursor: none;
-    margin-top:10px;
-    margin-right:10px;
 }
 
 /* color palette swap */

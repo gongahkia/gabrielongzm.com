@@ -1,6 +1,6 @@
 # personal site source code
 
-> SITE IS NOW [LIVE](https://gongahkia.github.io)
+THIS SITE IS NOW [LIVE](https://gongahkia.github.io)!
 
 ### technologies
 

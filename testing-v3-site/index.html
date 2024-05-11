@@ -1,0 +1,134 @@
+<!-- 
+fua
+  to change font under preload link in head tag and see if can download locally once and store within a local assets folder from https://github.com/kittykatattack/test/tree/master/fonts INSTEAD of preloading from hajime's website as im doing right now
+  to add logo for website here
+  to add image under aside figure tags
+  to change webpage title if needed
+  to ensure all file binaries are locally loaded from github server github.io repo, none of that compiled crap 
+  to rework logic for the light dark mode since i want completely randomised colors everytime, need to change here, script.js and style.css
+  to add libraries and open source contributions at section article tag section at the bottom of webpage
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Gabriel Ong is a legal technologist in Singapore">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link preload="stylesheet" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="https://res.hajimehoshi.com/fonts/SuisseIntl-Regular-WebXL.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="/hajimehoshi.webp" type="image/webp">
+  <style>.thin-space:after{content:"\2006"}</style>
+  <script src="script.js" defer></script>
+  <title>gabrielong.com</title>
+</head>
+<body>
+  <input type="checkbox" id="dark-mode"> <label for="dark-mode" id=
+  "dark-mode-light"><svg xmlns="http://www.w3.org/2000/svg" height=
+  "24" viewbox="0 -960 960 960" width="24">
+  <path d=
+  "M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z">
+  </path></svg></label> <label for="dark-mode" id=
+  "dark-mode-dark"><svg xmlns="http://www.w3.org/2000/svg" height=
+  "24" viewbox="0 -960 960 960" width="24">
+  <path d=
+  "M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z">
+  </path></svg></label>
+  <main>
+    <article>
+      <section class="title">
+        <header>
+          <h1>Gabriel Ong</h1>
+          <p>ガブリエル</p>
+          <p>I am a legal technologist in Singapore.</p>
+        </header>
+        <aside>
+          <figure>
+            <img src="hajimehoshi.webp" width="72" height="72" alt="Gabriel Ong">
+          </figure>
+        </aside>
+        <dl>
+          <dt>Accounts</dt>
+          <dd>
+            <a href="https://github.com/gongahkia">GitHub</a>,
+            <a href="https://www.linkedin.com/in/gabriel-zmong/">LinkedIn</a>,
+            <a href="https://gongzm.wordpress.com/">WordPress</a>,
+            <a href="https://letterboxd.com/gongtalksfilm/">Letterboxd</a>
+          </dd>
+          <dt>Resume</dt>
+          <dd>
+            <a href="resume/gong-resume.pdf">gong-resume.pdf</a>
+          </dd>
+          <dt>Mail</dt>
+          <dd>
+            <a href="mailto:gabrielzmong@gmail.com"><code>gabrielzmong@gmail.com</code></a>
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Works</h2>
+        <div class="grid-container">
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/judgeman">judgeman</a></h3>
+            <p>ELIT legal case facts parser</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/skill-hunter">skill-hunter</a></h3>
+            <p>SSO legislation parser</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/dc4u">dc4u</a></h3>
+            <p>Markup language for legal draft charges</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/gitfetch">gitfetch</a></h3>
+            <p>Snapshots of Github profiles</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/lohigh">lohigh</a></h3>
+            <p>Turns WAV files Lo-fi</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/ooe">ooe</a></h3>
+            <p>Toy markup language that transpiles to HTML</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/thoth">thoth</a></h3>
+            <p>Functional Lua library for the LÖVE game engine</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/monke">monke</a></h3>
+            <p>CLI Monkeytype clone</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/personal-site">gabrielong.com</a></h3>
+            <p>This website</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <dl>
+          <dt>Programming Languages</dt>
+          <dd>
+            Python, Go, JavaScript, PHP, Rust, Lua, C++, Java, Bash
+          </dd>
+          <dt>Libraries</dt>
+          <dd>
+            TO UPDATE THIS
+          </dd>
+          <dt>Languages</dt>
+          <dd>
+            English (native), Mandarin (second), Japanese (JLPT N4)
+          </dd>
+          <dt>Open Source Contributions</dt>
+          <dd>
+            TO UPDATE THIS and add anchor tags
+          </dd>
+        </dl>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

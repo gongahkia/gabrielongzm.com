@@ -13,8 +13,3 @@ THIS SITE IS NOW LIVE [HERE](https://gongahkia.github.io)!
 
 * [site version 1](https://github.com/gongahkia/small-stuff/tree/main/htmlcssjs/personal-site/personal-site-v1)
 * [site version 2](https://github.com/gongahkia/small-stuff/tree/main/htmlcssjs/personal-site/personal-site-v2)
-
-### screenshots
-
-![Screenshot 2024-05-11 203057](https://github.com/gongahkia/gabrielong.com/assets/117062305/470e7f81-8c67-4605-aa66-7403310876cb)
-![Screenshot 2024-05-11 203049](https://github.com/gongahkia/gabrielong.com/assets/117062305/5334d9ed-c468-446e-8f2c-a644259487b0)

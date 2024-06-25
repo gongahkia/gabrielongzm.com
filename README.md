@@ -11,5 +11,6 @@ THIS SITE IS NOW LIVE [HERE](https://gongahkia.github.io)!
 
 ### archived
 
-* [site version 1](https://github.com/gongahkia/small-stuff/tree/main/htmlcssjs/personal-site/personal-site-v1)
-* [site version 2](https://github.com/gongahkia/small-stuff/tree/main/htmlcssjs/personal-site/personal-site-v2)
+* [site version 1](archive/personal-site-v1)
+* [site version 2](archive/personal-site-v2)
+* [site version 3](archive/personal-site-v3)

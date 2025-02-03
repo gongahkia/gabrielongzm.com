@@ -440,12 +440,12 @@ function loadPage(page) {
                 <p>If I miss your e-mail, please contact me on LinkedIn.</p>
                 <h3>E-mail</h3>
                 <p>
-                    Business: <a href="mailto:gongahkia@gmail.com">gongahkia@gmail.com</a><br>
-                    School: <a href="mailto:gabriel.ong.2022@law.smu.edu.sg">gabriel.ong.2022@law.smu.edu.sg</a>
+                    Business: <a href="mailto:gabrielzmong@gmail.com"><i>gabrielzmong@gmail.com</i></a><br>
+                    School: <a href="mailto:gabriel.ong.2023@scis.smu.edu.sg"><i>gabriel.ong.2023@scis.smu.edu.sg</i></a>
                 </p>
                 <h3>LinkedIn</h3>
                 <p>
-                    <a href="https://www.linkedin.com/in/gabriel-zmong" target="_blank">https://www.linkedin.com/in/gabriel-zmong</a>
+                    <a href="https://www.linkedin.com/in/gabriel-zmong" target="_blank"><i>https://www.linkedin.com/in/gabriel-zmong</i></a>
                 </p>
             `
       break

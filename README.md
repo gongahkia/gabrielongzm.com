@@ -16,3 +16,4 @@ THIS SITE IS NOW LIVE [HERE](https://gongahkia.github.io)!
 * [site version 3](archive/personal-site-v3)
 * [site version 4](archive/personal-site-v4)
 * [site version 5](archive/personal-site-v5)
+* [site version 6](archive/personal-site-v6)

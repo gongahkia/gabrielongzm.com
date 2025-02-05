@@ -24,7 +24,9 @@
 ### usage
 
 ```console
+$ cd src/personal-site-v6
 $ npm install framer-motion
 $ npm install @tailwindcss/typography
 $ npm install @next/font
+$ npm run dev
 ```

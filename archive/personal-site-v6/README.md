@@ -1,18 +1,14 @@
 # portfolio site version 6
 
-* minimalist design ethos
-* interpolated polygon transform animations
-* randomised header strings
+* procedurally generated background
+* focus on elevating the beauty of ASCII 
 
 ### technologies
 
-![NextJS](https://img.shields.io/badge/-Next.JS-000?&logo=nextdotjs)
-![Tailwind](https://img.shields.io/badge/-Tailwind%20CSS-000?&logo=tailwind-css)
-![Vercel](https://img.shields.io/badge/-Vercel-000?&logo=vercel)
-
-### resources
-
-* visual reference from [Library of Babel](https://libraryofbabel.info/)
+![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript)
+![HTML](https://img.shields.io/badge/-HTML-000?&logo=html5)
+![CSS](https://img.shields.io/badge/-CSS-000?&logo=css3)
+![Github](https://img.shields.io/badge/-Github%20Sites-000?&logo=github)
 
 ### screenshots
 
@@ -20,13 +16,3 @@
 ![](screenshot/2.png)
 ![](screenshot/3.png)
 ![](screenshot/4.png)
-
-### usage
-
-```console
-$ cd src/personal-site-v6
-$ npm install framer-motion
-$ npm install @tailwindcss/typography
-$ npm install @next/font
-$ npm run dev
-```

@@ -406,3 +406,9 @@
         fill: var(--foreground-color);
     }
 }
+
+footer {
+    /* position: fixed; */
+    bottom: 0px;
+    margin-bottom: 25px;
+}

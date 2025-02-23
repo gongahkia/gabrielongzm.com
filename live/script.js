@@ -74,3 +74,25 @@ function checkHexDarkness(hexColor, threshold = 0.5) {
     const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
     return luminance < threshold;
 }
+
+// ----- setup code -----
+
+const config = {
+    timeZone: 'Asia/Singapore',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+},
+formatter = new Intl.DateTimeFormat([], config);
+
+// ----- execution code for current time -----
+
+const currentYear = new Date().getFullYear();
+
+setInterval(
+    () => {
+        document.querySelector("#time").innerText = formatter.format(new Date());
+    }
+, 1000)
+
+document.querySelector("#current-year").innerText = currentYear;

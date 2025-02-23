@@ -1,39 +1,178 @@
+<!-- 
+font reference
+  for the day when the referenced font url breaks
+  https://github.com/kittykatattack/test/tree/master/fonts 
+-->
+
+<!-- document start -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Gabriel Ong is a legal technologist in Singapore">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GABRIEL ONG</title>
-  <link rel="shortcut icon" href="./asset/icon/blob.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+  <link preload="stylesheet" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="https://res.hajimehoshi.com/fonts/SuisseIntl-Regular-WebXL.woff2" as="font" crossorigin="anonymous">
+  <style>.thin-space:after{content:"\2006"}</style>
   <script src="script.js" defer></script>
+  <title>GABRIEL ONG</title>
+  <link rel="shortcut icon" href="./asset/blob.ico" type="image/x-icon">
 </head>
 <body>
-  <div class="content">
-    <h1>GABRIEL ONG</h1>
-    <p>
-      <img src="./asset/place/mitake.jpg" alt="Gabriel Ong" id="profile-image">
-    </p>
-    <p id="timezone">
-      <i>
-        <a href="https://24timezones.com/world_directory/current_singapore_time.php">TIME IN SINGAPORE</a> - 
-        <span id="time">0:00 PM</span>
-        <a href="https://24timezones.com/time-zone/gmt+8">GMT+8</a>
-      </i>
-    </p>
-    <p id="links">
-      <a href="about.html">about</a> //
-      <a href="https://github.com/gongahkia/personal-wiki">notes</a> //
-      <a href="https://github.com/gongahkia">github</a> // 
-      <a href="https://gongzm.wordpress.com/">blog</a> // 
-      <a href="https://github.com/gongahkia/resume/blob/main/output/main.pdf">resume</a> // 
-      <a href="secret.html">secret</a> // 
-      <a href="contact.html">contact</a>
-    </p>
-  <footer>
-    <p>© 2023-<span id="current-year"></span> / Gabriel Ong / All rights reserved.</p>
-  </footer>
-  </div>
+
+  <input type="button" id="dark-mode">
+  <label for="dark-mode" id="">
+    <img id="infinityButton" src="asset/infinity.svg" height="24" viewbox="0 -960 960 960" width="24"/>
+  </label>
+
+<!-- start of actual website -->
+
+  <main>
+    <article class="overallArticleTags">
+
+    <!-- profile header -->
+
+      <section class="title">
+        <header>
+          <h1>Gabriel Ong</h1>
+          <p>谷口仁太</p>
+          <p>王哲勉</p>
+          <p>I am a legal technologist in Singapore.</p>
+        </header>
+        <aside>
+          <figure>
+            <img src="asset/gong1.png" width="115" height="115" alt="Gabriel Ong" id="gongImage">
+          </figure>
+        </aside>
+        <dl>
+          <dt>Accounts</dt>
+          <dd>
+            <a href="https://www.linkedin.com/in/gabriel-zmong/">LinkedIn</a>,
+            <a href="https://github.com/gongahkia">GitHub</a>,
+            <a href="https://gongzm.wordpress.com/">WordPress</a>,
+            <a href="https://letterboxd.com/gongtalksfilm/">Letterboxd</a>
+          </dd>
+          <dt>Resume</dt>
+          <dd>
+            <a href="https://github.com/gongahkia/resume/blob/main/output/main.pdf"><code>main.pdf</code></a>
+          </dd>
+          <dt>Mail</dt>
+          <dd>
+            <a href="mailto:gabrielzmong@gmail.com">gabrielzmong@gmail.com</a>,
+            <a href="mailto:gabriel.ong.2023@scis.smu.edu.sg">gabriel.ong.2023@scis.smu.edu.sg</a>
+          </dd>
+        </dl>
+      </section>
+
+    <!-- works (update as needed) -->
+
+      <!-- edit this below and also see if can add skills and tech? -->
+
+      <section class="works">
+        <h2>Works</h2>
+        <div class="grid-container">
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/judgeman">judgeman</a></h3>
+            <p>ELIT legal case facts parser</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/skill-hunter">skill-hunter</a></h3>
+            <p>SSO legislation parser</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/dc4u">dc4u</a></h3>
+            <p>Markup language for legal draft charges</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/gitfetch">gitfetch</a></h3>
+            <p>Snapshots of Github profiles</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/lohigh">lohigh</a></h3>
+            <p>Turns WAV files Lo-fi</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/ooe">ooe</a></h3>
+            <p>Toy markup language that transpiles to HTML</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/thoth">thoth</a></h3>
+            <p>Functional Lua library for the LÖVE game engine</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/monke">monke</a></h3>
+            <p>CLI Monkeytype clone</p>
+          </div>
+          <div class="grid-item-1">
+            <h3><a href="https://github.com/gongahkia/gabrielong.com">gabrielong.com</a></h3>
+            <p>This website</p>
+          </div>
+        </div>
+      </section>
+
+    <!-- skills -->
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <dl>
+          <dt>Programming Languages</dt>
+          <dd>
+            Python, Go, JavaScript, TypeScript, Lua, PHP, SQL, Rust, Haskell, Dart, etc.
+          </dd>
+          <dt>Technologies</dt>
+          <dd>
+            React, Next.js, Svelte, Vue.js, Flutter, Pytorch, Keras, Vulkan, WebGL, Laravel etc.
+          </dd>
+          <dt>Languages</dt>
+          <dd>
+            English (native), Mandarin (bilingual), Japanese (JLPT N4)
+          </dd>
+          <dt>Organizations</dt>
+          <dd>
+            <a href="https://github.com/modo-collective">The Modo Collective</a>,
+            <a href="https://github.com/4-0gpa">>4.0gpa</a>,
+            <a href="https://github.com/chesslablab">ChessLaBlab</a>,
+            <a href="https://github.com/The-Yap-Labs">The Yap Labs</a>
+            etc.
+          </dd>
+          <dt>Open Source Contributions</dt>
+          <dd>
+            <a href="https://github.com/4-0gpa/five-seconds">>4.0gpa</a>,
+            <a href="https://github.com/chesslablab/chess-server">ChessLaBlab</a>,
+            <a href="https://github.com/shardeum/shardeum-docs">Shardeum</a>, 
+            <a href="https://github.com/OSSPhilippines/personal-well-being-dashboard">OSSPH</a>, 
+            <a href="https://github.com/The-Yap-Labs">The Yap Labs</a>
+            etc.
+          </dd>
+        </dl>
+      </section>
+      <section class="skills">
+        <h2>Awards</h2>
+
+        <!-- add code here -->
+
+      </section>
+      <section class="skills">
+        <h2>Exerience</h2>
+
+        <!-- add code here -->
+
+      </section>
+      <section class="skills">
+        <h2>Education</h2>
+
+        <!-- add code here -->
+
+      </section>  
+      <section class="skills">
+        <h2>Licenses & Certifications</h2>
+
+        <!-- add code here -->
+
+      </section>  
+    </article>
+  </main>
 </body>
 </html>

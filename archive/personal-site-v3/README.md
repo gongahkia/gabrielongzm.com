@@ -14,6 +14,7 @@
 ### resources
 
 * visual reference from [Hajime Hoshi](https://hajimehoshi.com/)
+* icons are from [simpleicons](https://simpleicons.org/?q=smile)
 
 ### screenshots
 

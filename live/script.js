@@ -63,3 +63,49 @@ setInterval(
 , 1000)
 
 document.querySelector("#current-year").innerText = currentYear;
+
+// ----- get number of stars -----q
+
+async function fetchStarCount(repo) {
+  const response = await fetch(`https://api.github.com/repos/${repo}`);
+  const data = await response.json();
+  return data.stargazers_count;
+}
+
+async function updateStarCounts() {
+  const starCountElements = document.querySelectorAll('.star-count');
+  for (const element of starCountElements) {
+    const repo = element.getAttribute('data-repo');
+    try {
+      const starCount = await fetchStarCount(repo);
+      element.textContent = `★ ${starCount}`;
+    } catch (error) {
+      console.error(`Error: Unable to fetch star count for ${repo}:`, error);
+    }
+  }
+}
+
+updateStarCounts();
+
+// ----- get number of forks -----
+
+async function fetchForkCount(repo) {
+  const response = await fetch(`https://api.github.com/repos/${repo}`);
+  const data = await response.json();
+  return data.forks_count;
+}
+
+async function updateForkCounts() {
+  const forkCountElements = document.querySelectorAll('.fork-count');
+  for (const element of forkCountElements) {
+    const repo = element.getAttribute('data-repo');
+    try {
+      const forkCount = await fetchForkCount(repo);
+      element.textContent = `✌ ${forkCount}`;
+    } catch (error) {
+      console.error(`Error: Unable to fetch fork count for ${repo}:`, error);
+    }
+  }
+}
+
+updateForkCounts();

@@ -1,6 +1,6 @@
 # personal site source code
 
-THIS SITE IS NOW LIVE [HERE](https://gongahkia.github.io)!
+THIS SITE IS NOW LIVE [HERE](https://gabrielongzm.com)!
 
 ### technologies
 

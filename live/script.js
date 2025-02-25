@@ -68,6 +68,20 @@ document.querySelector("#current-year").innerText = currentYear;
 
 // ----- click animation -----
 
+// document.addEventListener('click', function(event) {
+//     const clickContainer = document.getElementById('click-container');
+//     const clickElement = document.createElement('div');
+//     clickElement.textContent = 'click';
+//     clickElement.classList.add('click-animation');
+//     clickElement.style.left = (event.clientX - 20) + 'px';
+//     clickElement.style.top = (event.clientY - 10) + 'px';
+//     clickElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--click-text-color');
+//     clickContainer.appendChild(clickElement);
+//     setTimeout(() => {
+//         clickContainer.removeChild(clickElement);
+//     }, 1000);
+// });
+
 document.addEventListener('click', function(event) {
     const clickContainer = document.getElementById('click-container');
     const clickElement = document.createElement('div');
@@ -76,8 +90,10 @@ document.addEventListener('click', function(event) {
     clickElement.style.left = (event.clientX - 20) + 'px';
     clickElement.style.top = (event.clientY - 10) + 'px';
     clickElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--click-text-color');
+    const existingAnimations = clickContainer.getElementsByClassName('click-animation');
+    Array.from(existingAnimations).forEach(el => el.remove());
     clickContainer.appendChild(clickElement);
     setTimeout(() => {
-        clickContainer.removeChild(clickElement);
+        clickElement.remove();
     }, 1000);
 });

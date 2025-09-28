@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        layout {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <script src="../emulators.js"></script>
+    <script src="audio-node.js"></script>
+    <script src="webgl.js"></script>
+    <script src="stats.min.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <div id="controls">
+            <button onClick="javascript:downloadBundleAndRun({worker: true, shared: false})">Start Worker</button>
+            <button onClick="javascript:downloadBundleAndRun({worker: false, shared: false})">Start Direct</button>
+            <button onClick="javascript:downloadBundleAndRun({worker: true, shared: true})">Start Shared Worker</button>
+            <button onClick="javascript:downloadBundleAndRun({worker: false, shared: true})">Start Shared Direct</button>
+        </div>
+        <p>FRAME:</p>
+        <canvas id="canvas"></canvas>
+        <p>STDOUT:</p>
+        <pre id="stdout"></pre>
+    </div>
+
+    <script>
+        emulators.pathPrefix = "../";
+
+        const stats = new Stats();
+        stats.showPanel(0);
+        stats.dom.style.left = "initial";
+        stats.dom.style.right = "0px";
+        document.body.appendChild(stats.dom);
+
+        let runId = 0;
+        async function runBundle(bundle, options) {
+            emulators.wdosboxJs = options.shared ? "wdosbox.shared.js" : "wdosbox.js";
+            const id = runId++;
+            const stdout = document.getElementById("stdout");
+            const canvas = document.getElementById("canvas");
+            const gl = canvas.getContext("webgl");
+
+            // promise is resolved when emulator is started
+            const ci = await (options.worker ?
+                emulators.dosWorker(bundle) :
+                emulators.dosDirect(bundle));
+
+            window.ci = ci;
+
+            webGl({ 
+                canvas,
+                addOnResize: () => {},
+            }, ci);
+            audioNode(ci);
+
+            ci.events().onStdout((message) => {
+                stdout.innerHTML += message;
+            });
+
+            function getKeyCode(code) {
+                switch (code) {
+                    case 13: return 257;
+                    case 38: return 265;
+                    case 39: return 262;
+                    case 37: return 263;
+                    case 40: return 264;
+                    case 17: return 341;
+                    default: return code;
+                }
+            }
+
+            window.addEventListener("keydown", (e) => {
+                ci.sendKeyEvent(getKeyCode(e.keyCode), true);
+                e.stopPropagation();
+            });
+            window.addEventListener("keyup", (e) => {
+                ci.sendKeyEvent(getKeyCode(e.keyCode), false);
+                e.stopPropagation();
+            });
+            window.addEventListener("mousedown", (e) => {
+                ci.sendMouseButton(0, true);
+                e.stopPropagation();
+            });
+            window.addEventListener("mouseup", (e) => {
+                ci.sendMouseButton(0, false);
+                e.stopPropagation();
+            });
+        }
+
+        function downloadBundleAndRun(options) {
+            document.getElementById("controls").style.display = "none";
+            const bundleUrl = "temp.jsdos?timestamp=" + Date.now();
+
+            // we need to download bundle, emulators accept only Uint8Array
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", bundleUrl, true);
+            xhr.overrideMimeType("text/plain; charset=x-user-defined");
+            xhr.responseType = "arraybuffer";
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // do not forget to create Uint8Array, 
+                    // arraybuffer will not work!
+                    runBundle(new Uint8Array(xhr.response), options);
+                }
+            };
+            xhr.send();
+        };
+    </script>
+</body>
+
+</html>

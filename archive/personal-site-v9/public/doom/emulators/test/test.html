@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Emulators Tests</title>
+    <link href="mocha.css" rel="stylesheet" />
+    <style>
+        .test-config {
+            position: fixed;
+            left: 15px;
+            top: 15px;
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+        }
+
+        .test-config-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mocha"></div>
+    <script src="mocha.js"></script>
+    <script src="chai.js"></script>
+    <script>
+        mocha.setup({
+            ui: 'qunit',
+            allowUncaught: true,
+            bail: true,
+            fullTrace: true,
+            timeout: 60000
+        });
+    </script>
+    <script src="test.js"></script>
+    
+    <div id="test-config" class="test-config">
+        <div class="test-config-row">
+            <p>IPX Server Address:&nbsp;</p>
+            <input id="ipx-ip" type="text" value="127.0.0.1"></input>
+        </div>
+        <button id="start-button">Start tests</button>
+    </div>
+
+    <script>
+        const testConfig = document.getElementById("test-config");
+        const startButton = document.getElementById("start-button");
+        startButton.addEventListener("click", () => {
+            testConfig.style.display = "none";
+
+            window.ipxServerAddress = document.getElementById("ipx-ip").value.trim();
+            window.createTests();
+            mocha.run();
+        });
+    </script>
+</body>
+
+</html>

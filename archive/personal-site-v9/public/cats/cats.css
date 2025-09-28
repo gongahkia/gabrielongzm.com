@@ -1,0 +1,11 @@
+#meow-btn {
+  flex-grow: 1;
+  color: white;
+  border: none;
+  border-radius: 1ch;
+  background: blue;
+  padding: 1ch;
+  margin: 10px;
+  font-size: medium;
+  overflow-wrap: anywhere;
+}

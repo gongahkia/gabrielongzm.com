@@ -1,11 +1,22 @@
-TODO:
+# portfolio site version 9
 
-- [X] Optimize CRT effect to be less laggy
-- [X] Dynamically load projects from GitHub
-- [X] Add more personal Info
-- [X] Fix Scrolling
-- [X] Make control center more integrated
-- [X] Implement DOOM and Cats stuff from playground also integrate the Window95 thing
-- [X] Improve the Background animation
-- [ ] Join Fediring or something similar
-- [ ] Move doom stuff to a CDN
+* retro, modular design
+* references to cli commands
+
+### technologies
+
+![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript)
+![HTML](https://img.shields.io/badge/-HTML-000?&logo=html5)
+![CSS](https://img.shields.io/badge/-CSS-000?&logo=css3)
+![Vercel](https://img.shields.io/badge/-Vercel-000?&logo=vercel)
+
+### resources
+
+* visual reference from [dinama.dev's personal site](https://dinama.dev/)
+
+### screenshots
+
+![](screenshot/1.png)
+![](screenshot/2.png)
+![](screenshot/3.png)
+![](screenshot/4.png)

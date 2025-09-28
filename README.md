@@ -19,3 +19,4 @@ THIS SITE IS NOW LIVE [HERE](https://gabrielongzm.com)!
 * [site version 6](archive/personal-site-v6)
 * [site version 7](archive/personal-site-v7)
 * [site version 8](archive/personal-site-v8)
+* [site version 9](archive/personal-site-v9)

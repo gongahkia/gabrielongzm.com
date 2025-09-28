@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gabriel Ong - Personal Website</title>
+        <title>My Personal Website</title>
         <meta name="description" content="Gabriel Ong is a Full Stack Developer in Singapore specialising in Legal Technology.">
         <link rel="stylesheet" href="/style.css">
         <script type="text/javascript" src="/script.js" defer></script>
@@ -23,7 +23,6 @@
                 <button class="toggle-btn active" id="crtToggle">CRT</button>
                 <button class="toggle-btn active" id="vignetteToggle">Vignette</button>
                 <button class="toggle-btn active" id="backgroundToggle">Background</button>
-                <button class="toggle-btn" id="paintToggle">Paint</button>
             </div>
 
             <div class="container">
@@ -31,7 +30,7 @@
                     <h2>cat about.txt</h2>
                 </header>
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
-                    <img src="/assets/gong2.png" alt="Picture of Gabriel Ong" width="15%" margin-top="10px" margin-bottom="10px">
+                    <img src="/assets/gong2.png" alt="Picture of Gabriel Ong" style="width: 12%; margin: 10px 10px 10px 10px;">
                     <p>
                     Gabriel is a penultimate undergraduate student reading Computing and 
                     Law at Singapore Management University. He currently works at WhyHow.AI, 
@@ -46,20 +45,76 @@
                 <header>
                     <h2>ls -la ~/projects/</h2>
                 </header>
-                <!-- Fixed height container to prevent layout shift -->
-                <div class="projects-container" style="min-height: 200px; position: relative;">
-                    <div id="projects-loading" class="loading-state" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;">
-                        <p>Loading projects...</p>
-                    </div>
-                    <div id="projects-error" class="error-state" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;">
-                        <p>Failed to load projects. <button id="retry-btn">Retry</button></p>
-                    </div>
-                    <table id="projects-table" style="display: none; width: 100%;">
-                        <tbody id="projects-tbody">
-                            <!-- Projects will be loaded here dynamically -->
-                        </tbody>
-                    </table>
-                </div>
+                <table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td>-rwxr-xr-x</td>
+                            <td>gabriel</td>
+                            <td>Sep 28, 2025</td>
+                            <td>
+                                <a href="https://github.com/gongahkia/yuho" target="_blank" rel="noopener noreferrer">yuho</a>
+                                <span class="status-badge status-active">ACTIVE</span><br>
+                                <div class="project-description">Domain-specific language for Singapore Criminal Law</div>
+                                <div class="tech-stack">Python • ANTLR • Grammar • DSL</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>-rwxr-xr-x</td>
+                            <td>gabriel</td>
+                            <td>Sep 28, 2025</td>
+                            <td>
+                                <a href="https://github.com/gongahkia/sea-kayak" target="_blank" rel="noopener noreferrer">sea-kayak</a>
+                                <span class="status-badge status-active">ACTIVE</span><br>
+                                <div class="project-description">Singapore's Daily Legal Updates Web App</div>
+                                <div class="tech-stack">React • Node.js • MongoDB • Web-scraping</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>-rwxr-xr-x</td>
+                            <td>gabriel</td>
+                            <td>Sep 28, 2025</td>
+                            <td>
+                                <a href="https://github.com/gongahkia/skill-hunter" target="_blank" rel="noopener noreferrer">skill-hunter</a>
+                                <span class="status-badge status-active">ACTIVE</span><br>
+                                <div class="project-description">SSO Legislation Browser Extension</div>
+                                <div class="tech-stack">JavaScript • Chrome Extension • API • Web-scraping</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>-rwxr-xr-x</td>
+                            <td>gabriel</td>
+                            <td>Sep 28, 2025</td>
+                            <td>
+                                <a href="https://github.com/gongahkia/dc4u" target="_blank" rel="noopener noreferrer">dc4u</a>
+                                <span class="status-badge status-active">ACTIVE</span><br>
+                                <div class="project-description">Markup language for Charge Sheet Drafting</div>
+                                <div class="tech-stack">Python • Parsing • Legal-tech • DSL</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>-rwxr-xr-x</td>
+                            <td>gabriel</td>
+                            <td>Sep 28, 2025</td>
+                            <td>
+                                <a href="https://github.com/gongahkia/jikai" target="_blank" rel="noopener noreferrer">jikai</a>
+                                <span class="status-badge status-active">ACTIVE</span><br>
+                                <div class="project-description">Tort Law hypothetical Generation Model</div>
+                                <div class="tech-stack">Python • NLP • Legal-AI • Machine-learning</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>-rwxr-xr-x</td>
+                            <td>gabriel</td>
+                            <td>Sep 28, 2025</td>
+                            <td>
+                                <a href="https://github.com/gongahkia/judgeman" target="_blank" rel="noopener noreferrer">judgeman</a>
+                                <span class="status-badge status-active">ACTIVE</span><br>
+                                <div class="project-description">eLitigation Case Brief Browser Extension</div>
+                                <div class="tech-stack">JavaScript • Chrome Extension • Legal-tech • PDF</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="container">
@@ -166,6 +221,72 @@
 
             <div class="container">
                 <header>
+                    <h2>cat experience.txt</h2>
+                </header>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Aug 2025 - Dec 2025</strong></td>
+                            <td>
+                                WhyHow.AI<br>
+                                Software Engineer Intern
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>May 2025 - Aug 2025</strong></td>
+                            <td>
+                                SMU Yong Pung How School of Law<br>
+                                Research Assistant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>May 2025 - Aug 2025</strong></td>
+                            <td>
+                                Custom Automated Systems<br>
+                                Full Stack Development Intern
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jan 2025 - Apr 2025</strong></td>
+                            <td>
+                                SMU Yong Pung How School of Law<br>
+                                Research Assistant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aug 2024 - Mar 2025</strong></td>
+                            <td>
+                                The Modo Collective<br>
+                                Founder, Lead Developer
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sep 2024 - Dec 2024</strong></td>
+                            <td>
+                                Elefant<br>
+                                Backend Development Intern
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aug 2023 - Oct 2024</strong></td>
+                            <td>
+                                SMU Legal Innovation and Technology (LIT)<br>
+                                Tech Development Director
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apr 2024 - Aug 2024</strong></td>
+                            <td>
+                                The Yap Labs<br>
+                                Co-Founder, Tech Lead
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <header>
                     <h2>cat awards.log</h2>
                 </header>
                 <table>
@@ -204,14 +325,10 @@
 
             <div class="container">
                 <header>
-                    <h2>./fun</h2>
+                    <h2>./work</h2>
                 </header>
                 <p>
                     <a aria-label="Resume" href="./resume/main.pdf"><strong>📄 View my Resume</strong></a><br>
-                    <a aria-label="Organizations" href="https://github.com/modo-collective"><strong>🏢 The Modo Collective</strong></a><br>
-                    <a aria-label="4.0GPA" href="https://github.com/4-0gpa"><strong>🎓 >4.0gpa</strong></a><br>
-                    <a aria-label="ChessLaBlab" href="https://github.com/chesslablab"><strong>♟️ ChessLaBlab</strong></a><br>
-                    <a aria-label="The Yap Labs" href="https://github.com/The-Yap-Labs"><strong>🔬 The Yap Labs</strong></a><br>
                 </p>
             </div>
 
@@ -227,17 +344,4 @@
         </canvas>
 
     </body>
-    <script>
-    const meow = document.getElementById("meow-audio");
-    meow.preservesPitch = false;
-
-    function meowPlay() {
-        meow.playbackRate = 0.75 + (Math.random() * 0.5);
-        if (meow.paused) {
-            meow.play();
-        } else {
-            meow.currentTime = 0;
-        }
-    }
-    </script>
 </html>

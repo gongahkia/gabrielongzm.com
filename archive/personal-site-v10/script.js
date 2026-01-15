@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         'education': '<span class="section-title">Education</span>' +
                      '<dl>' +
-                     '<dt>Aug 2023 - Apr 2027</dt><dd>Bachelor of Science (Computing and Law)<br>Singapore Management University<br>GPA: 3.60/4.00</dd>' +
-                     '<dt>Jan 2019 - Dec 2020</dt><dd>International Baccalaureate Diploma Programme (IBDP)<br>Anglo Chinese School (Independent)<br>Score: 44/45</dd>' +
+                     '<dt>Aug 2023 - Apr 2027</dt><dd>Bachelor of Science (Computing and Law)\\nSingapore Management University\\nGPA: 3.60/4.00</dd>' +
+                     '<dt>Jan 2019 - Dec 2020</dt><dd>International Baccalaureate Diploma Programme (IBDP)\\nAnglo Chinese School (Independent)\\nScore: 44/45</dd>' +
                      '</dl>',
 
         'experience': '<span class="section-title">Experience</span>' +

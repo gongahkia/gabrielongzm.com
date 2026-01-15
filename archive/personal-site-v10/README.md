@@ -1,6 +1,7 @@
 # portfolio site version 10
 
-* tui-first interface
+* tui interface
+* requires text-based input from user
 
 ### technologies
 
@@ -14,3 +15,5 @@
 ![](screenshot/2.png)
 ![](screenshot/3.png)
 ![](screenshot/4.png)
+![](screenshot/5.png)
+![](screenshot/6.png)

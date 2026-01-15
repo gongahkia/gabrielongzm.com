@@ -102,8 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function type(text, i = 0) {
         if (i < text.length) {
-            output.innerHTML += text.charAt(i);
-            i++;
+            if (text.substring(i, i + 4) === '<br>') {
+                output.innerHTML += '<br>';
+                i += 4;
+            } else {
+                output.innerHTML += text.charAt(i);
+                i++;
+            }
             setTimeout(() => type(text, i), 50);
         }
     }

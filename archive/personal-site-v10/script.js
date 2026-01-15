@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminal = document.getElementById('terminal');
 
     const content = {
-        'whoami': 'Gabriel Ong (王哲勉)\\n' +
-                  'Full Stack Developer specialising in Legal Technology.\\n' +
+        'whoami': 'Gabriel Ong (王哲勉)<br>' +
+                  'Full Stack Developer specialising in Legal Technology.<br>' +
                   'Singapore (GMT+8)',
 
         'contact': '<span class="section-title">Accounts</span>' +
@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         'education': '<span class="section-title">Education</span>' +
                      '<dl>' +
-                     '<dt>Aug 2023 - Apr 2027</dt><dd>Bachelor of Science (Computing and Law)\\nSingapore Management University\\nGPA: 3.60/4.00</dd>' +
-                     '<dt>Jan 2019 - Dec 2020</dt><dd>International Baccalaureate Diploma Programme (IBDP)\\nAnglo Chinese School (Independent)\\nScore: 44/45</dd>' +
+                     '<dt>Aug 2023 - Apr 2027</dt><dd>Bachelor of Science (Computing and Law)<br>Singapore Management University<br>GPA: 3.60/4.00</dd>' +
+                     '<dt>Jan 2019 - Dec 2020</dt><dd>International Baccalaureate Diploma Programme (IBDP)<br>Anglo Chinese School (Independent)<br>Score: 44/45</dd>' +
                      '</dl>',
 
         'experience': '<span class="section-title">Experience</span>' +
@@ -87,16 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
                           '<dt>Jun 2021</dt><dd>Advanced Certificate in Infocomm Technology</dd>' +
                           '</dl>',
 
-        'help': 'Available commands:\\n' +
-                '  whoami          - Display my information\\n' +
-                '  contact         - Show my accounts, resume, and mail\\n' +
-                '  works           - List my projects\\n' +
-                '  skills          - Show my technical skills\\n' +
-                '  education       - List my education history\\n' +
-                '  experience      - List my work experience\\n' +
-                '  awards          - List my awards\\n' +
-                '  certifications  - List my licenses and certifications\\n' +
-                '  clear           - Clear the terminal\\n' +
+        'help': 'Available commands:<br>' +
+                '  whoami          - Display my information<br>' +
+                '  contact         - Show my accounts, resume, and mail<br>' +
+                '  works           - List my projects<br>' +
+                '  skills          - Show my technical skills<br>' +
+                '  education       - List my education history<br>' +
+                '  experience      - List my work experience<br>' +
+                '  awards          - List my awards<br>' +
+                '  certifications  - List my licenses and certifications<br>' +
+                '  clear           - Clear the terminal<br>' +
                 '  help            - Show this help message'
     };
 
@@ -130,6 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    type("Welcome to my portfolio. Type 'help' to see available commands.\\n© 2023-2026 Gabriel Ong. All rights reserved.\\n\\n");
+    type("Welcome to my portfolio. Type 'help' to see available commands.<br>© 2023-2026 Gabriel Ong. All rights reserved.<br><br>");
 });
 
